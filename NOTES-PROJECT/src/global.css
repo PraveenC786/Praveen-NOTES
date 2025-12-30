@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body, #root{
+    background-color: bisque;
+    height: 100vh;
+    width: 100%;
+}
+#navContainer{
+    height: 70px;
+    background-color: rgb(71, 19, 130);
+    color: white;
+    display: flex;
+}
+
+.logo{
+    color: brown;
+    background-color: bisque;
+    border-radius: 20px 0px;
+    padding: 5px 10px;
+    
+}
+.logo span{
+    color: bisque;
+    background-color: brown;
+    border-radius: 20px 0px;
+    padding: 3px 10px;
+}
+.list{
+    height: 70px;
+    display: flex;
+    color: gold;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 400px;
+    margin-left: 20px;
+    font-size: 30px;
+    list-style-type: none;
+}
+
+.mainContainer{
+    display: flex;
+    background-color: bisque;
+}
+
+.formContainer{
+    position: sticky;
+    height: 510px;
+    width: 400px;
+    background-color: rgba(137, 32, 32, 0.371);
+    border:1px solid rgb(5, 13, 19);
+    box-shadow: -5px 5px 10px black;
+    border-radius: 10px;
+    margin: 50px 30px;
+    
+}
+
+.formContainer section{
+    padding: 15px 40px;
+}
+
+.formContainer h1{
+    text-align: center;
+    font-size: 25px;
+    color: brown;
+    padding-bottom: 5px;
+    background-color: white;
+    box-shadow: inset 2px -5px 3px;
+    border-radius: 20px;
+}
+
+.formContainer input,textarea,select{
+    width: 100%;
+    border-radius: 10px;
+    font-size: large;
+    padding: 5px;
+}
+.form_label{
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+.formContainer textarea{
+    font-family: 'Times New Roman', Times, serif;
+}
+.formContainer input{
+    height: 25px;
+}
+
+.formContainer button{
+    height: 30px;
+    width: 70%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn{
+    text-align: center;
+}
+
+/* noteslist styles right sidebar  */
+.noteslist{
+    width: 100%;
+    border-left: 2px solid black;
+    padding-left: 20px;
+}
+.noteslist_heading{
+    background-color: blue;
+    color: yellow;
+    margin: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: inset -5px -5px 2px;
+}
+.notes_category{
+    font-family: Arial;
+  margin: 20px 0;
+  display: flex;
+    border-radius: 20px;
+    background-color: aquamarine;
+    padding: 10px 20px;
+    margin: 20px;
+}
+.notes_category label{
+    background-color: rgb(248, 255, 47);
+    padding: 5px;
+    border-radius: 0px 20px;
+    margin-bottom: 20px;
+}
+
+/* ============================================================ */
+
+.notes_category .input_field {
+    background-color: blue;
+    color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  padding-right: 20px;
+}
+
+.notes_category .input_field input[type="radio"] {
+  accent-color: #007bff; /* modern blue */
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* TEXT LOOKS LIKE A CLICKABLE LINK */
+.notes_category .input_field span {
+  font-size: 17px;
+  color: #edeeef;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.notes_category .input_field:hover {
+ /* transform: scale(1.2); */
+ box-shadow:  5px 2px 1px black;
+ background-color: #edeeef;
+ span {color: #0056b3;}
+}
+
+/* SELECTED OPTION STYLE */
+.notes_category .input_field input[type="radio"]:checked + span {
+  font-weight: bold;
+  text-decoration: underline;
+  
+  
+}
+
+/* ============================================================ */
+/* ============================================================ */
+#editbtn, #delbtn{
+    color: bisque;
+    background-color: brown;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.notes_container{
+    margin-left: 10px;
+    padding: 10px;
+    /* background: #f6f1f1; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100vh;
+}
+.listitem{
+    position: relative;
+    background-color: rgba(255, 188, 105, 0.332);
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 350px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.listitem:hover{
+    background-color: rgba(255, 230, 6, 0.482);
+    transition: 0.3s;
+    transform: scale(1.02);
+    box-shadow: 5px 5px 10px 1px rgba(16, 14, 2, 0.351);
+}
+
+.listitem h2{
+    box-shadow: inset 1px 1px 20px rgb(64, 63, 63);
+    border-radius: 30px;
+    /* background-color: rgb(123, 234, 4); */
+    background-color: rgb(19, 4, 234);
+    color: yellow;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.listitem p{
+    background-color: rgba(255, 255, 255, 0.408);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    overflow-y: hidden;
+    height: 170px;
+}
+.listitem p:hover{
+    overflow-y: scroll;
+
+}
+.btnset{
+    position: absolute;
+    width: 90%;
+    bottom: 10px;     
+}
+
+@media only screen and ( max-width:600px){
+    #navContainer{
+        background-color:blank;
+        width: 100%;
+    }
+    #navContainer .logo{
+        font-size: 14px;
+        width: 150px;
+    }
+    .formContainer{
+        width: 90%;
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .notes_category{
+        /* position: relative; */
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .notes_category label{
+        font-size: small;
+    }
+    .notes_category .input_field{
+         width: 300px;
+         text-align: center;
+        }
+        .notes_category label{
+            margin-bottom: 10px;
+        }
+        .notes_category .input_field span{
+            /* position: absolute; */
+            font-size: small;
+            padding-left: 10px;
+            text-align: center;
+            margin: 0px;
+    }
+    .noteslist{
+        padding: 0px;
+    }
+.noteslist_heading{
+    margin: 0px;
+}
+    .notes_container{
+        gap:0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .listitem{
+        margin-bottom: 0px;
+        width: 120%;
+        margin: 0px;
+    }
+}
